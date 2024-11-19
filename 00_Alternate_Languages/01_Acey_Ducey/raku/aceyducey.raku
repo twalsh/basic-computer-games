@@ -30,7 +30,7 @@ while $keepPlaying {
 	my $playerBalance = 100;      # The player starts with $100
 
 	HAND:
-	while True {
+	loop {
 		say "\nYou now have $playerBalance dollars.\n\n";
 
         # We'll create a new array that is a shuffled version of the deck.
@@ -86,7 +86,7 @@ say "Thanks for playing!";
 ################
 sub getValidBet ($maxBet) {
     INPUT: 
-    loop {
+    {
         say "\nWhat's your bet? ";
 
         my $input = $*IN.get;
